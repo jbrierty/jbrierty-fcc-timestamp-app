@@ -22,8 +22,8 @@ function urlPrinter(req, res){
         res.write('A unix timestamp will show a natural language date,\n');
         res.write('and a natural language date will show a unix timestamp.\n');
         res.write('\n');
-        res.write('example 1: https://timestamp3-jbrierty.c9users.io/January 1, 2016\n');
-        res.write('example 2: https://timestamp3-jbrierty.c9users.io/1451606400\n');
+        res.write('example 1: jbrierty-fcc-timestamp-app.herokuapp.com/January 1, 2016\n');
+        res.write('example 2: jbrierty-fcc-timestamp-app.herokuapp.com/1451606400\n');
     }else if(isUnix(usefullImput)){
         res.write('You entered the unix timestamp '+ usefullImput+ '.');
         var nat = moment(usefullImput, "X").format("MMMM D, YYYY");
@@ -36,8 +36,8 @@ function urlPrinter(req, res){
         res.write('\n{\"unix\":'+ unix +',\"natural\":\"'+ usefullImput +'\"}');
     }else{
     res.write('You entered '+ usefullImput +"\nYour entry is not in the right format.\n\n");
-    res.write('example 1: https://timestamp3-jbrierty.c9users.io/January 1, 2016\n');
-    res.write('example 2: https://timestamp3-jbrierty.c9users.io/1451606400\n');
+    res.write('example 1: jbrierty-fcc-timestamp-app.herokuapp.com/January 1, 2016\n');
+    res.write('example 2: jbrierty-fcc-timestamp-app.herokuapp.com/1451606400\n');
     }
     res.end();
 }
