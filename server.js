@@ -44,5 +44,8 @@ function urlPrinter(req, res){
 
 var port = Number(process.env.PORT || 3000)
 
-http.createServer(urlPrinter).listen(port)
+var server = http.createServer(urlPrinter)
+
+server.listen(port)
+
 console.log('server is now running...')
