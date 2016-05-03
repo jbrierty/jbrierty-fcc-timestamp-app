@@ -7,7 +7,7 @@ function isUnix(str) {
 }
 
 function isNatural(str){
-    return moment(str, "MMMM D, YYYY", true).isValid();
+    return moment(str, "MMMM D, Y", true).isValid();
 } 
 
 function urlPrinter(req, res){
@@ -26,12 +26,12 @@ function urlPrinter(req, res){
         res.write('example 2: jbrierty-fcc-timestamp-app.herokuapp.com/1451606400\n');
     }else if(isUnix(usefullImput)){
         res.write('You entered the unix timestamp '+ usefullImput+ '.');
-        var nat = moment(usefullImput, "X").format("MMMM D, YYYY");
+        var nat = moment(usefullImput, "X").format("MMMM D, Y");
         res.write('\nThis converts to the natural date '+ nat + '.');
         res.write('\n{\"unix\":'+ usefullImput +',\"natural\":\"'+ nat +'\"}');
     }else if(isNatural(usefullImput)){
         res.write('You entered the natural date '+ usefullImput+ '.');
-        var unix = moment(usefullImput, "MMMM D, YYYY").format("X");
+        var unix = moment(usefullImput, "MMMM D, Y").format("X");
         res.write('\nThis converts to the unix time '+ unix + '.');
         res.write('\n{\"unix\":'+ unix +',\"natural\":\"'+ usefullImput +'\"}');
     }else{
