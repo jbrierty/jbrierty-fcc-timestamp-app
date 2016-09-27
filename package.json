@@ -1,9 +1,9 @@
 {
-  "name": "chat-example",
+  "name": "fcctimestampapp",
   "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "description": "Ann application that converts between unix time and standard dates.",
   "main": "server.js",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "author": "Jack Brierty",
   "dependencies": {
     "async": "~0.2.8",
     "express": "^3.2.6",
@@ -13,6 +13,5 @@
   "scripts": {
     "start": "node server.js"
   },
-  "devDependencies": {},
   "license": "ISC"
 }
