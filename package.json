@@ -1,7 +1,7 @@
 {
   "name": "fcctimestampapp",
   "version": "0.0.0",
-  "description": "Ann application that converts between unix time and standard dates.",
+  "description": "An application that converts between unix time and standard dates.",
   "main": "server.js",
   "author": "Jack Brierty",
   "dependencies": {
